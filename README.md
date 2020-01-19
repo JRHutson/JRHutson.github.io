@@ -2,9 +2,11 @@
 
 A strategic problem solver with an established track record of leveraging Data to drive market presence and optimize process efficiency, seeking an opportunity to help my organization innovate novel ways to profit from their Data.
 
-### Projects
+### Mapping Projects
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+**LA Regional Food Bank locator map.**
+[Open the Map.](http://jrhutson.github.io/Food-Resource-Map/)
+Part of a volunteer project with the LA Regional Food Bank, this dynamic webmap is designed for end users to easily find food resources in their area. Symbology communicates locations that will be distributing food in the next few days. 
 
 ```markdown
 Syntax highlighted code block
