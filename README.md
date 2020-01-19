@@ -18,8 +18,10 @@ Exploratory Data Analysis looking at the rate of DUI arrests along 6 freeway seg
 ## Mapping Projects
 
 **LA Regional Food Bank locator map.**
-[Open the Map.](http://jrhutson.github.io/Food-Resource-Map/)
+
 Part of a volunteer project with the LA Regional Food Bank, this dynamic webmap is designed for end users to easily find food resources in their area. Symbology communicates locations that will be distributing food in the next few days. 
+
+[Open the Map.](http://jrhutson.github.io/Food-Resource-Map/)
 
 ***Tools Used:***
 1. HTML
