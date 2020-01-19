@@ -1,8 +1,19 @@
-## Joseph Regan Hutson
+# Joseph Regan Hutson
 
 A strategic problem solver with an established track record of leveraging Data to drive market presence and optimize process efficiency, seeking an opportunity to help my organization innovate novel ways to profit from their Data.
 
-### Mapping Projects
+## Data Projects
+
+**Is the rate of DUI arrests impacted by access to transit?**
+
+Exploratory Data Analysis looking at the rate of DUI arrests along 6 freeway segments in Los Angeles. Completed as part of General Assembly Python Programming Course.
+
+***Tools Used:***
+1. Python
+2. Pandas
+3. GeoPandas
+
+## Mapping Projects
 
 **LA Regional Food Bank locator map.**
 [Open the Map.](http://jrhutson.github.io/Food-Resource-Map/)
@@ -12,31 +23,3 @@ Part of a volunteer project with the LA Regional Food Bank, this dynamic webmap 
 1. HTML
 2. Javascript
 3. Leaflet
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JRHutson/JRHutson/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
