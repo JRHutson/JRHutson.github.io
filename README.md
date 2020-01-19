@@ -7,6 +7,7 @@ A strategic problem solver with an established track record of leveraging Data t
 **Is the rate of DUI arrests impacted by access to transit?**
 
 Exploratory Data Analysis looking at the rate of DUI arrests along 6 freeway segments in Los Angeles. Completed as part of General Assembly Python Programming Course.
+
 [View a static version of the Jupyter Notebook](https://jrhutson.github.io/dui_rate_vs_transit/)
 
 ***Tools Used:***
