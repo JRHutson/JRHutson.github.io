@@ -8,6 +8,11 @@ A strategic problem solver with an established track record of leveraging Data t
 [Open the Map.](http://jrhutson.github.io/Food-Resource-Map/)
 Part of a volunteer project with the LA Regional Food Bank, this dynamic webmap is designed for end users to easily find food resources in their area. Symbology communicates locations that will be distributing food in the next few days. 
 
+***Tools Used:***
+1. HTML
+2. Javascript
+3. Leaflet
+
 ```markdown
 Syntax highlighted code block
 
