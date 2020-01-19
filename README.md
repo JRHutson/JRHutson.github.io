@@ -1,10 +1,8 @@
-## Welcome to GitHub Pages
+## Joseph Regan Hutson
 
-You can use the [editor on GitHub](https://github.com/JRHutson/JRHutson/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+A strategic problem solver with an established track record of leveraging Data to drive market presence and optimize process efficiency, seeking an opportunity to help my organization innovate novel ways to profit from their Data.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
+### Projects
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
