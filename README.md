@@ -2,7 +2,7 @@
 
 Examples of personal projects that I have worked on.
 
-## Data Projects
+## Data Exploration
 
 **Is the rate of DUI arrests impacted by access to transit?**
 
