@@ -31,3 +31,16 @@ Part of a volunteer project with the LA Regional Food Bank, this dynamic webmap 
 1. HTML
 2. Javascript
 3. Leaflet
+
+## General Scripting
+
+**Apartment Hunting with Python**
+
+This script was used to find my current apartment. It searches Craigslist for postings meeting my search criteria for size, rent, etc... I wanted to be near transit, so it then calculates the distance between the post Geotag and the nearest LA Metro Gold Line station. If the distance is less than the maximum distance set the listing is posted to a Slack channel so that I would get notified on my phone. 
+
+[View the Github Repository](https://github.com/JRHutson/CraigslistHousing)
+
+***Tools Used:***
+1. Python
+2. GeoJSON
+3. Craigslist Library
