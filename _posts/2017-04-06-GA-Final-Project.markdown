@@ -5,7 +5,7 @@ date: 2017-09-12 13:32:20 +0300
 description: Final Project completed for General Assembly Python course in fall of 2019. Exploratory Data Analysis attempts to identify any correlation between the availability of Mass Transit Alternatives and the rate of DUI arrests along 6 freeway segments in Los Angeles. # Add post description (optional)
 img: metrotrain.jpg # Add image post (optional)
 fig-caption: Photo by Daryan Shamkhali on Unsplash # Add figcaption (optional)
-tags: [Exploratory Data Analysis, Pandas, GeoPandas]
+tags: [Exploratory Data Analysis, Python, Pandas, GeoPandas]
 ---
 ***Tools Used:***
 1. Python
