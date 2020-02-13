@@ -1,57 +1,36 @@
-# Joseph Regan Hutson
+# Flexible-Jekyll is a simple and clean theme for Jekyll
 
-Examples of personal projects that I have worked on.
+![](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/promo-img.jpg?raw=true)
 
-## Data Exploration
+## Demo
 
-**Is the rate of DUI arrests impacted by access to transit?**
+Check the theme in action [Demo](https://artemsheludko.github.io/flexible-jekyll/)
 
-Exploratory Data Analysis looking at the rate of DUI arrests along 6 freeway segments in Los Angeles. Completed as part of General Assembly Python Programming Course.
+The main page would look like this:
 
-[View a static version of the Jupyter Notebook](https://jrhutson.github.io/dui_rate_vs_transit/)
+![Main page preview](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/home-page.jpg?raw=true)
 
-[View the Github Repository](https://github.com/JRHutson/dui_rate_vs_transit)
+The post page would look like this:
 
-***Tools Used:***
-1. Python
-2. Pandas
-3. GeoPandas
+![Post page preview](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/post-example.jpg?raw=true)
 
-## Mapping
+## Features
 
-**LA Regional Food Bank locator map.**
+- [Google Fonts](https://fonts.google.com/)
+- [Font Awesome](http://fontawesome.io/)
+- [Disqus](https://disqus.com/)
+- [Analytics](https://analytics.google.com/analytics/web/)
+- Support Emoji
 
-Part of a volunteer project with the LA Regional Food Bank, this dynamic webmap is designed for end users to easily find food resources in their area. Symbology communicates locations that will be distributing food in the next few days. 
+## Installation:
 
-[Open the Map.](http://jrhutson.github.io/Food-Resource-Map/)
+Fork the ``master`` branch and follow the [Jekyll Installation Documentation](https://jekyllrb.com/docs/installation/).
 
-[View the Github Repository](https://github.com/JRHutson/Food-Resource-Map)
+## License
 
-***Tools Used:***
-1. HTML
-2. Javascript
-3. Leaflet
+GNU General Public License v3.0
 
-## General Scripting
+## Donate
 
-**Identifying Gateway IP**
-
-This script was used to support a very large data collection effort. In order for the system being deployed to function it was necessary to know the Gateway IP address of each computer it would be installed on. Once other data was collected through ESRI's Survey 123 app, this script would run daily to pull features that had been uploaded to the server, identify the needed data and update the feature. One of the datasets queried contains over 1 Million rows, leading to the need to use Pandas in the process. 
-
-[View the Github Repository](https://github.com/JRHutson/PopulateGatewayIP)
-
-***Tools Used:***
-1. Python
-2. Pandas
-3. ArcGIS API for Python
-
-**Apartment Hunting with Python**
-
-This script was used to find my current apartment. It searches Craigslist for postings meeting my search criteria for size, rent, etc... I wanted to be near transit, so it then calculates the distance between the post Geotag and the nearest LA Metro Gold Line station. If the distance is less than the maximum distance set, the listing is posted to a Slack channel so that I would get notified on my phone. 
-
-[View the Github Repository](https://github.com/JRHutson/CraigslistHousing)
-
-***Tools Used:***
-1. Python
-2. GeoJSON
-3. Craigslist Library
+<p>If you like the themes that I create you can become my sponsor on <a href="https://www.patreon.com/artemsheludko" target="_blank">Patreon</a>.
+<p align="center"><b>Thank you for your support ❤️</b></p>
