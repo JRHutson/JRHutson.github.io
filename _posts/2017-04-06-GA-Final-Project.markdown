@@ -30,6 +30,8 @@ Initial analysis looked at characteristics of the dataset, such as the time dist
 ### Time Distribution through the day of LA County Sheriffs DUI Arrests
 ![DUI Arrest Distribution]({{site.baseurl}}/assets/img/GAFinalProject/SheriffsDUIArrestsTimeDistribution.png)
 
+https://jrhutson.github.io/assets/img/GAFinalProject/SheriffsDUIArrestsTimeDistribution.png
+
 While the City of Los Angeles could conceivably be patroled by three Law Enforcement agencies, I was only able to aquire clean arrest data from two of those. The California Highway Patrol data available through the CA State data portal is mixed with reports from other agencies. At the time of this analysis, LA County was only publishing 6 months worth of data whereas City of Los Angeles publishes almost 10 years worth of arrest data. In order to decide whether to limit my scope to the six months of overlap, I looked at how many of the LA County Sheriffs DUI arrests were within the City of Los Angeles. 
 
 ### Locations of Sheriffs DUI Arrests compared to City of Los Angeles Boundary
