@@ -41,3 +41,6 @@ Freeway segments and associated ramps were selected and buffered in QGIS. Becaus
 
 ### Buffered Freeway Segments
 ![Buffered Freeways]({{site.baseurl}}/assets/img/GAFinalProject/BufferedFreeways.png)
+
+
+
