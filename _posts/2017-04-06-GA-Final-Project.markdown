@@ -22,6 +22,8 @@ Final Project completed for General Assembly Python course in fall of 2019. Expl
 
 The Jupyter Notebook (linked above and in the Github Repo) follows my process to clean the data, isolate relevant data points and identify additional datasets that I needed and test my hypothesis that the rate of DUI's would be lower on freeways that parallel a Metro Rail line.
 
+## Initial Analysis
+
 Initial analysis looked at characteristics of the dataset, such as the time distribution and differences seen when DUI Arrests were isolated from the wider dataset.
 
 ### Time Distribution through the day of LA County Sheriffs Arrests
@@ -30,14 +32,28 @@ Initial analysis looked at characteristics of the dataset, such as the time dist
 ### Time Distribution through the day of LA County Sheriffs DUI Arrests
 ![DUI Arrest Distribution]({{site.url}}/assets/img/GAFinalProject/SheriffsDUIArrestsTimeDistribution.png)
 
+## Sample Conclusions:
+  1. Distribution of arrest times in the Sheriff's data shows clear peaks in the morning and afternoon.
+  2. Distribution of DUI arrest times in the Sheriff's data shows a much different pattern with a single clear peak at 3 AM.
+
+## Determining Dataset for Final Analysis
 
 While the City of Los Angeles could conceivably be patroled by three Law Enforcement agencies, I was only able to aquire clean arrest data from two of those. The California Highway Patrol data available through the CA State data portal is mixed with reports from other agencies. At the time of this analysis, LA County was only publishing 6 months worth of data whereas City of Los Angeles publishes almost 10 years worth of arrest data. In order to decide whether to limit my scope to the six months of overlap, I looked at how many of the LA County Sheriffs DUI arrests were within the City of Los Angeles. 
 
 ### Locations of Sheriffs DUI Arrests compared to City of Los Angeles Boundary
 ![Sheriffs DUI Arrests vs City of LA]({{site.url}}/assets/img/GAFinalProject/SheriffsDataVsCityBoundary.png)
 
-I combined the total DUI arrests within the City of Los Angeles during that 6mo period and calculated the percentage of DUI arrests that were made by LA County Sheriffs. The percentage was less that 1%, so I decided to focus on the LAPD data and widen the timeframe that I was looking at.
+I combined the total DUI arrests within the City of Los Angeles during that 6mo period and calculated the percentage of DUI arrests that were made by LA County Sheriffs. 
 
+How much of an impact would the Sheriff's data have?
+  In the 6 Months of available data LA County Sheriffs only made 39 DUI arrests within the city limits of Los Angeles. This makes sense, as they typically patrol unincorporated parts of the county.  
+  In the same time period, LAPD made 4255 arrests within the city.  
+  39/4255 = 0.00916
+Less than 1% of DUI Arrests in the City of LA were from LA County Sheriff's during that 6mo period
+
+Due to the low percentage I decided to exclude the Sheriff's data and focus on the LAPD data. This allowed me to widen the timeframe I was looking at and have a larger dataset to analyze.
+
+## Connecting DUI's to Freeway Segments
 Freeway segments and associated ramps were selected and buffered in QGIS. Because there was not a common attribute to connect a ramp feature to a particular segment of freeway, this was the easiest path.
 
 ### Buffered Freeway Segments
