@@ -53,12 +53,16 @@ While the City of Los Angeles could conceivably be patroled by three Law Enforce
 I combined the total DUI arrests within the City of Los Angeles during that 6mo period and calculated the percentage of DUI arrests that were made by LA County Sheriffs. 
 
 How much of an impact would the Sheriff's data have?
-  In the 6 Months of available data LA County Sheriffs only made 39 DUI arrests within the city limits of Los Angeles. This makes sense, as they typically patrol unincorporated parts of the county.  
+
+  In the 6 Months of available data LA County Sheriffs only made 39 DUI arrests within the city limits of Los Angeles. This makes sense, as they typically patrol unincorporated parts of the county.
+
   In the same time period, LAPD made 4255 arrests within the city.  
+
   39/4255 = 0.00916
+
 __Less than 1% of DUI Arrests in the City of LA were from LA County Sheriff's during that 6mo period__
 
-Due to the low percentage I decided to exclude the Sheriff's data and focus on the LAPD data. This allowed me to widen the timeframe I was looking at and have a larger dataset to analyze.
+Due to the low percentage I decided to exclude the Sheriff's data and focus on the LAPD data. This allowed me to widen the timeframe I was looking at and base my analysis on a much larger dataset.
 
 ---
 ## Connecting DUI's to Freeway Segments
