@@ -90,16 +90,21 @@ Freeway segments and associated ramps were selected and buffered in QGIS. Becaus
 ## Initial Conclusions
   1. This is not the pattern expected, the segments with the most DUI's are those with a rail option.
   2. Need to isolate other possible variables.
-  3. How does the amount of traffic impact the data?
+  3. Segments are not all the same length. Additionally, traffic levels may be different.
+  3. Data needs to be normalized to ensure we are making a valid comparison
 
 ## Normalizing for Traffic
 AADT (Average Annual Daily Total) Traffic Counts from California Department of Transportation were brought into the analysis. The same buffers were used to select all data points that fell within a buffer and take the average.
 
 ![AADT Points]({{site.url}}/assets/img/GAFinalProject/AADTPoints.png)
 
+This gives us the average number of cars traveling along that segment of freeway per day.
+
 After converting the DUI data into a rate of DUI's per 1000 cars.
 
 ![Normalized Data]({{site.url}}/assets/img/GAFinalProject/NormalizedComparison.png)
+
+With the data normalized, the three freeway segments with rail alternatives all have the highest rate of DUI arrests.
 
 ---
 
