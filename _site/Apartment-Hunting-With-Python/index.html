@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Apartment Hunting With Python - Joseph Regan Hutson</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Joseph Regan Hutson" property="og:site_name">
+  
+    <meta content="Apartment Hunting With Python" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="Python automation script used to facilitate an apartment search." property="og:description">
+  
+  
+    <meta content="http://localhost:4000/Apartment-Hunting-With-Python/" property="og:url">
+  
+  <!--
+    <meta content="2017-09-09T14:00:00-07:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+   -->
+  
+    <meta content="http://localhost:4000/assets/img/topdownstreets.jpg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="Python" property="article:tag">
+    
+    <meta content="Automation" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="Apartment Hunting With Python">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/Apartment-Hunting-With-Python/">
+  
+  
+    <meta name="twitter:description" content="Python automation script used to facilitate an apartment search.">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/topdownstreets.jpg">
+  
+
+	<meta name="description" content="Python automation script used to facilitate an apartment search.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/DuckThumbnail.png" alt="Joseph Regan Hutson"></a>
+      </div>
+      <div class="author-name">Joseph Regan Hutson</div>
+      <p>Python Developer focused on Data Analysis and Automation</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        <!-- 
+          <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+         -->
+        <!--
+          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+         -->
+        
+          <li class="github"><a href="http://github.com/JRHutson" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/jrhutson" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:hutson.regan@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2026 &copy; Joseph Regan Hutson</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/topdownstreets.jpg alt="Apartment Hunting With Python">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Apartment Hunting With Python</h1>
+        <!--div class="page-date"><span>2017, Sep 09&nbsp;&nbsp;&nbsp;&nbsp;</span></div-->
+      </header>
+      <p><strong><em>Tools Used:</em></strong></p>
+<ol>
+  <li>Python</li>
+  <li>GeoJSON</li>
+  <li>Craigslist Library</li>
+</ol>
+
+<p><a href="https://github.com/JRHutson/CraigslistHousing">View the Github Repository</a></p>
+
+<p>This script was used to find my current apartment. It searches Craigslist for postings meeting my search criteria for size, rent, etc… My other criteria was being near transit, so it calculates the distance between the post Geotag and the nearest LA Metro L Line (Gold) station. If the distance is less than the maximum distance set, the listing is posted to a Slack channel to provide notification.</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Apartment Hunting With Python&url=http://localhost:4000/Apartment-Hunting-With-Python/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/Apartment-Hunting-With-Python/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://www.reddit.com/submit?url=http://localhost:4000/Apartment-Hunting-With-Python/" title="Share on Reddit" rel="nofollow" target="_blank">Reddit</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#Python" class="tag">&#35; Python</a>
+          
+            <a href="/tags#Automation" class="tag">&#35; Automation</a>
+          
+        </div>
+      </div>
+      <!--<section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+ -->
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
