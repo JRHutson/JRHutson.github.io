@@ -12,7 +12,7 @@ site-twitter: #if your site has a twitter account, enter it here
 author: Joseph Regan Hutson # add your name
 author-img: DuckThumbnail.png # add your photo
 about-author: Python Developer focused on Data Analysis and Automation  # add description
-social-twitter: JRHutson# add your Twitter handle
+social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
 social-github: JRHutson # add your Github handle
 social-linkedin: jrhutson # add your Linkedin handle

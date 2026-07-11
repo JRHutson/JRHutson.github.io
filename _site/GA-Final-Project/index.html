@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Does Access To Transit Impact DUI's In Los Angeles - Joseph Regan Hutson</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Joseph Regan Hutson" property="og:site_name">
+  
+    <meta content="Does Access To Transit Impact DUI's In Los Angeles" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="Final Project completed for General Assembly Python course in fall of 2019. Exploratory Data Analysis attempts to identify any correlation between the availability of Mass Transit Alternatives and the rate of DUI arrests along 6 freeway segments in Los Angeles." property="og:description">
+  
+  
+    <meta content="http://localhost:4000/GA-Final-Project/" property="og:url">
+  
+  <!--
+    <meta content="2017-09-12T03:32:20-07:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+   -->
+  
+    <meta content="http://localhost:4000/assets/img/metrotrain.jpg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="Exploratory Data Analysis" property="article:tag">
+    
+    <meta content="Python" property="article:tag">
+    
+    <meta content="Pandas" property="article:tag">
+    
+    <meta content="GeoPandas" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="Does Access To Transit Impact DUI's In Los Angeles">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/GA-Final-Project/">
+  
+  
+    <meta name="twitter:description" content="Final Project completed for General Assembly Python course in fall of 2019. Exploratory Data Analysis attempts to identify any correlation between the availability of Mass Transit Alternatives and the rate of DUI arrests along 6 freeway segments in Los Angeles.">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/metrotrain.jpg">
+  
+
+	<meta name="description" content="Final Project completed for General Assembly Python course in fall of 2019. Exploratory Data Analysis attempts to identify any correlation between the availability of Mass Transit Alternatives and the rate of DUI arrests along 6 freeway segments in Los Angeles.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/DuckThumbnail.png" alt="Joseph Regan Hutson"></a>
+      </div>
+      <div class="author-name">Joseph Regan Hutson</div>
+      <p>Python Developer focused on Data Analysis and Automation</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        <!-- 
+          <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+         -->
+        <!--
+          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+         -->
+        
+          <li class="github"><a href="http://github.com/JRHutson" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/jrhutson" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:hutson.regan@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2026 &copy; Joseph Regan Hutson</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/metrotrain.jpg alt="Does Access To Transit Impact DUI's In Los Angeles">
+        
+          <figcaption>Photo by Daryan Shamkhali on Unsplash</figcaption>
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Does Access To Transit Impact DUI's In Los Angeles</h1>
+        <!--div class="page-date"><span>2017, Sep 12&nbsp;&nbsp;&nbsp;&nbsp;</span></div-->
+      </header>
+      <p><strong><em>Tools Used:</em></strong></p>
+<ol>
+  <li>Python</li>
+  <li>Pandas</li>
+  <li>GeoPandas</li>
+</ol>
+
+<p><a href="https://jrhutson.github.io/dui_rate_vs_transit/">View a static version of the Jupyter Notebook</a></p>
+
+<p><a href="https://github.com/JRHutson/dui_rate_vs_transit">View the Github Repository</a></p>
+
+<p>Final Project completed for General Assembly Python course in fall of 2019. Exploratory Data Analysis attempts to identify any correlation between the availability of Mass Transit Alternatives and the rate of DUI arrests along 6 freeway segments in Los Angeles.</p>
+
+<p>The Jupyter Notebook (linked above and in the Github Repo) follows my process to clean the data, isolate relevant data points and identify additional datasets that I needed and test my hypothesis that the rate of DUI’s would be lower on freeways that parallel a Metro Rail line.</p>
+
+<hr />
+
+<h2 id="hypothesis-to-test">Hypothesis to Test</h2>
+
+<h3 id="segments-with-a-metro-rail-alternative-will-have-a-lower-rate-of-dui-incidence">Segments with a Metro Rail alternative will have a lower rate of DUI incidence.</h3>
+
+<hr />
+
+<h2 id="initial-analysis">Initial Analysis</h2>
+
+<p>Initial analysis looked at characteristics of the dataset, such as the time distribution and differences seen when DUI Arrests were isolated from the wider dataset.</p>
+
+<h3 id="time-distribution-through-the-day-of-la-county-sheriffs-arrests">Time Distribution through the day of LA County Sheriffs Arrests</h3>
+<p><img src="http://localhost:4000/assets/img/GAFinalProject/SheriffsArrestsTimeDistribution.png" alt="General Arrest Distribution" /></p>
+
+<h3 id="time-distribution-through-the-day-of-la-county-sheriffs-dui-arrests">Time Distribution through the day of LA County Sheriffs DUI Arrests</h3>
+<p><img src="http://localhost:4000/assets/img/GAFinalProject/SheriffsDUIArrestsTimeDistribution.png" alt="DUI Arrest Distribution" /></p>
+
+<h2 id="sample-conclusions">Sample Conclusions:</h2>
+<ol>
+  <li>Distribution of arrest times in the Sheriff’s data shows clear peaks in the morning and afternoon.</li>
+  <li>Distribution of DUI arrest times in the Sheriff’s data shows a much different pattern with a single clear peak at 3 AM.</li>
+</ol>
+
+<hr />
+
+<h2 id="determining-dataset-for-final-analysis">Determining Dataset for Final Analysis</h2>
+
+<p>While the City of Los Angeles could conceivably be patroled by three Law Enforcement agencies, I was only able to aquire clean arrest data from two of those. The California Highway Patrol data available through the CA State data portal is mixed with reports from other agencies. At the time of this analysis, LA County was only publishing 6 months worth of data whereas City of Los Angeles publishes almost 10 years worth of arrest data. In order to decide whether to limit my scope to the six months of overlap, I looked at how many of the LA County Sheriffs DUI arrests were within the City of Los Angeles.</p>
+
+<h3 id="locations-of-sheriffs-dui-arrests-compared-to-city-of-los-angeles-boundary">Locations of Sheriffs DUI Arrests compared to City of Los Angeles Boundary</h3>
+<p><img src="http://localhost:4000/assets/img/GAFinalProject/SheriffsDataVsCityBoundary.png" alt="Sheriffs DUI Arrests vs City of LA" /></p>
+
+<p>I combined the total DUI arrests within the City of Los Angeles during that 6mo period and calculated the percentage of DUI arrests that were made by LA County Sheriffs.</p>
+
+<p>How much of an impact would the Sheriff’s data have?</p>
+
+<p>In the 6 Months of available data LA County Sheriffs only made 39 DUI arrests within the city limits of Los Angeles. This makes sense, as they typically patrol unincorporated parts of the county.</p>
+
+<p>In the same time period, LAPD made 4255 arrests within the city.</p>
+
+<p>39/4255 = 0.00916</p>
+
+<p><strong>Less than 1% of DUI Arrests in the City of LA were from LA County Sheriff’s during that 6mo period</strong></p>
+
+<p>Due to the low percentage I decided to exclude the Sheriff’s data and focus on the LAPD data. This allowed me to widen the timeframe I was looking at and base my analysis on a much larger dataset.</p>
+
+<hr />
+
+<h2 id="connecting-duis-to-freeway-segments">Connecting DUI’s to Freeway Segments</h2>
+<p>Freeway segments and associated ramps were selected and buffered in QGIS. Because there was not a common attribute to connect a ramp feature to a particular segment of freeway, this was the easiest path.</p>
+
+<h3 id="freeway-segments">Freeway Segments</h3>
+<p><img src="http://localhost:4000/assets/img/GAFinalProject/FreewaySegments.png" alt="Freeway Segments" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Freeway Segment</th>
+      <th style="text-align: center">Rail Alternative?</th>
+      <th style="text-align: center">Line</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">10</td>
+      <td style="text-align: center">Yes</td>
+      <td style="text-align: center">E Line (Expo)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">101</td>
+      <td style="text-align: center">Yes</td>
+      <td style="text-align: center">B Line (Red)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">110</td>
+      <td style="text-align: center">Yes</td>
+      <td style="text-align: center">L Line (Gold)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">405</td>
+      <td style="text-align: center">No</td>
+      <td style="text-align: center">None</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center">No</td>
+      <td style="text-align: center">None</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">118</td>
+      <td style="text-align: center">No</td>
+      <td style="text-align: center">None</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="duis-falling-within-buffers">DUI’s Falling Within Buffers</h3>
+<p><img src="http://localhost:4000/assets/img/GAFinalProject/DUIsInFreewayBuffers.png" alt="Freeway DUI's" /></p>
+
+<hr />
+
+<h2 id="comparing-dui-incidence">Comparing DUI Incidence</h2>
+<p><img src="http://localhost:4000/assets/img/GAFinalProject/RawDUIRateBySegment.png" alt="Raw DUI Incidence" /></p>
+
+<h2 id="initial-conclusions">Initial Conclusions</h2>
+<ol>
+  <li>This is not the pattern expected, the segments with the most DUI’s are those with a rail option.</li>
+  <li>Need to isolate other possible variables.</li>
+  <li>Segments are not all the same length. Additionally, traffic levels may be different.</li>
+  <li>Data needs to be normalized to ensure we are making a valid comparison</li>
+</ol>
+
+<h2 id="normalizing-for-traffic">Normalizing for Traffic</h2>
+<p>AADT (Average Annual Daily Total) Traffic Counts from California Department of Transportation were brought into the analysis. The same buffers were used to select all data points that fell within a buffer and take the average.</p>
+
+<p><img src="http://localhost:4000/assets/img/GAFinalProject/AADTPoints.png" alt="AADT Points" /></p>
+
+<p>This gives us the average number of cars traveling along that segment of freeway per day.</p>
+
+<p>After converting the DUI data into a rate of DUI’s per 1000 cars.</p>
+
+<p><img src="http://localhost:4000/assets/img/GAFinalProject/NormalizedComparison.png" alt="Normalized Data" /></p>
+
+<p>With the data normalized, the three freeway segments with rail alternatives all have the highest rate of DUI arrests.</p>
+
+<hr />
+
+<h2 id="conclusions">Conclusions</h2>
+
+<ol>
+  <li>Based on the normalized data, the initial hypothesis must be rejected.</li>
+  <li>The correlation between high DUI’s and Rail, might indicate that similar factors contribute to them.
+    * For example, population centers that contribute to DUI’s would also be a factor in transit funding.</li>
+</ol>
+
+<h2 id="questions-for-future-analysis">Questions for Future Analysis</h2>
+
+<ul>
+  <li>Does a new Metro Line influence the rate of DUI’s when it opens?</li>
+  <li>What is the distribution of DUI’s in Los Angeles?</li>
+  <li>What are the trends in DUI incidence and distribution over time?</li>
+</ul>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Does Access To Transit Impact DUI's In Los Angeles&url=http://localhost:4000/GA-Final-Project/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/GA-Final-Project/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/GA-Final-Project/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#Exploratory Data Analysis" class="tag">&#35; Exploratory Data Analysis</a>
+          
+            <a href="/tags#Python" class="tag">&#35; Python</a>
+          
+            <a href="/tags#Pandas" class="tag">&#35; Pandas</a>
+          
+            <a href="/tags#GeoPandas" class="tag">&#35; GeoPandas</a>
+          
+        </div>
+      </div>
+      <!--<section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+ -->
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
