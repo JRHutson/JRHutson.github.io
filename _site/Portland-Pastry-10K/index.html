@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Portland Pastry 10K Walk - Joseph Regan Hutson</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Joseph Regan Hutson" property="og:site_name">
+  
+    <meta content="Portland Pastry 10K Walk" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="Webmap project created to support a community 10K walk." property="og:description">
+  
+  
+    <meta content="http://localhost:4000/Portland-Pastry-10K/" property="og:url">
+  
+  <!--
+    <meta content="2026-06-06T03:32:20-07:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+   -->
+  
+    <meta content="http://localhost:4000/assets/img/PastryMap.jpg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="Web-Map" property="article:tag">
+    
+    <meta content="Leaflet" property="article:tag">
+    
+    <meta content="Community" property="article:tag">
+    
+    <meta content="Pro-Bono" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="Portland Pastry 10K Walk">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/Portland-Pastry-10K/">
+  
+  
+    <meta name="twitter:description" content="Webmap project created to support a community 10K walk.">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/PastryMap.jpg">
+  
+
+	<meta name="description" content="Webmap project created to support a community 10K walk.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/DuckThumbnail.png" alt="Joseph Regan Hutson"></a>
+      </div>
+      <div class="author-name">Joseph Regan Hutson</div>
+      <p>Python Developer focused on Data Analysis and Automation</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        <!-- 
+          <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+         -->
+        <!--
+          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+         -->
+        
+          <li class="github"><a href="http://github.com/JRHutson" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/jrhutson" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:hutson.regan@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2026 &copy; Joseph Regan Hutson</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/PastryMap.jpg alt="Portland Pastry 10K Walk">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Portland Pastry 10K Walk</h1>
+        <!--div class="page-date"><span>2026, Jun 06&nbsp;&nbsp;&nbsp;&nbsp;</span></div-->
+      </header>
+      <p><strong><em>Contents:</em></strong></p>
+
+<p><a href="#data-digitization">Data Digitization</a><br />
+<a href="#basemap-styling-in-mapbox">Basemap Styling in Mapbox</a><br />
+<a href="#leaflet-map-development">Leaflet Map Development</a><br />
+<a href="#event-day">Event Day</a><br />
+<a href="#takeaways">Takeaways</a></p>
+
+<p><strong><em>Tools Used:</em></strong></p>
+<ol>
+  <li>Q-GIS - Open Source Geographic Information System</li>
+  <li>Mapbox - Platform for hosting custom basemaps styled from Open Streetmap data</li>
+  <li>Leaflet - Light weight javascript library for building web-maps</li>
+  <li>GitHub Pages - Simple web hosting option</li>
+</ol>
+
+<p><a href="https://jrhutson.github.io/Portland-pastry-10k/">View the live map</a></p>
+
+<p>I developed this interactive webmap to support a commumity event called the Portland Pastry 10K.<br />
+This grassroots event organized a 10K walk to foster community in Portland Oregon and support local small businesses.<br />
+The map I developed:</p>
+<ul>
+  <li>Coordinates with the event branding.</li>
+  <li>Allows participants to easily reference their current position and the intended route.</li>
+  <li>Provides details on participating businesses in pop-ups.
+    <ul>
+      <li>Social Media links for all.</li>
+      <li>Physical addresses for permanent brick and mortar locations.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<hr />
+
+<h2 id="data-digitization">Data Digitization</h2>
+
+<p>I used QGIS to digitize route and vendor data.<br />
+This method was ideal for a number of reasons:</p>
+<ul>
+  <li>Ease of export of data to Geo-JSON.</li>
+  <li>Able to ensure that data projection matches map projection.</li>
+  <li>Granular control of data attibute fields.</li>
+</ul>
+
+<h3 id="data-manipulation-in-q-gis">Data Manipulation in Q-GIS</h3>
+<p><img src="http://localhost:4000/assets/img/PastryMapQGIS.jpg" alt="Data Manipulation in Q-GIS" /></p>
+
+<h3 id="attribute-manipulation-in-q-gis">Attribute Manipulation in Q-GIS</h3>
+<p><img src="http://localhost:4000/assets/img/PastryMapQGISAttributes.jpg" alt="Attribute Manipulation in Q-GIS" /></p>
+
+<hr />
+
+<h2 id="color-choice">Color Choice</h2>
+<p>The information provided by the organizers told me that Salmon was going to be the primary color for the event’s materials.<br />
+I knew that I would need complimentary colors in order to style the map in a way that would be both pleasing and ledgible.<br />
+I used a <a href="https://www.colorpalettegenerator.co">Color Palette Generator</a> to assemble a group of colors that would compliment that primary color, while providing highlights or contrast as needed.</p>
+
+<h3 id="pastry-map-color-palette">Pastry Map Color Palette</h3>
+<p><img src="http://localhost:4000/assets/img/PastryMapColorPalette.jpg" alt="Pastry Map Color Palette" /></p>
+
+<hr />
+
+<h2 id="basemap-styling-in-mapbox">Basemap Styling in Mapbox</h2>
+
+<p>Because I wanted all aspects of the map to fit with the event branding, I needed a way to create and host my own custom basemap.<br />
+After reviewing their plans, I confirmed that my expected usage would fall well within the Mapbox Free Tier.</p>
+
+<h3 id="feature-prioritization">Feature Prioritization</h3>
+<p>I made sure that my styling focused on local streets and paths that would be the most relevant features for participants.<br />
+Salmon made sense as the primary background color, to fit with the event branding.<br />
+I used other colors from my palette to ensure that streets, paths and labels would complement the salmon background.</p>
+
+<h3 id="feature-styling">Feature Styling</h3>
+<p>I configured the styling for prioritized features through Mapbox Studio.
+<img src="http://localhost:4000/assets/img/PastryMapMapboxFeatures.jpg" alt="Styling Features in Mapbox" /></p>
+
+<hr />
+
+<h2 id="leaflet-map-development">Leaflet Map Development</h2>
+
+<h3 id="hosting">Hosting</h3>
+<p>Based on the scale of the event and the expected usage, I was comfortable that Github Pages would be adequate to serve as a hosting service.</p>
+
+<h3 id="basemap-integration">Basemap Integration</h3>
+<p>Accessing the custom basemap that I configured through Mapbox requires a private key token.
+I knew that this would be deployed to Github Pages and the token would be visible, so I invested time in making sure it was managed in a secure way.</p>
+
+<p>The Github Pages deployment uses a specific key that I setup to only work for requests from the Github Pages URL.
+This ensures that even though the key is publicly visible it is not useful for any other purpose.</p>
+
+<p>For local development, I used my account’s default token.</p>
+
+<p>I stored the token in a separate file and added it to gitignore.</p>
+
+<p>Once set up, I could push code changes without exposing the default token.</p>
+
+<h3 id="data-integration">Data Integration</h3>
+<p>I exported the data from QGIS in two GeoJSON files.</p>
+
+<p>One contained points for the stops along the route and attributes of the vendors. The other contained a line marking the route.</p>
+
+<p>I started to load the files into Leaflet using a structure modeled on older webmap projects I built.</p>
+
+<p>Due to new browser restrictions on loading local files the data was blocked and I had to find a new solution.</p>
+
+<p>In the end, I stored the GeoJSON text as variables in two javascript files and imported the variables into memory when the page is loaded.</p>
+
+<h3 id="custom-css">Custom CSS</h3>
+<p>Leaflet does not have a built in labeling function.</p>
+
+<p>The best option my research identified was to use the Tool Tip function and set it to always be visible.</p>
+
+<p>I modified both the Tooltip and Pop-up features with custom CSS so they would fit with the color pallate.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">return</span> <span class="nt">L</span><span class="nc">.circleMarker</span><span class="o">(</span><span class="nt">latlon</span><span class="o">,</span> <span class="err">3</span><span class="o">)</span><span class="nc">.bindPopup</span><span class="o">(</span><span class="nt">content</span><span class="o">,</span> <span class="p">{</span><span class="err">'className'</span> <span class="err">:</span> <span class="err">'PastryPopUp'</span><span class="p">}</span><span class="o">)</span>
+        <span class="nc">.bindTooltip</span><span class="o">(</span><span class="nt">label</span><span class="o">,</span> <span class="p">{</span><span class="py">className</span><span class="p">:</span> <span class="s2">'PastryToolTip'</span><span class="p">,</span> <span class="n">permanent</span><span class="p">:</span> <span class="no">true</span><span class="p">,</span> <span class="nf">opacity</span><span class="p">:</span> <span class="m">0.8</span><span class="p">,</span> <span class="n">offset</span><span class="p">:</span> <span class="p">[</span><span class="m">0</span><span class="p">,</span><span class="m">30</span><span class="p">],</span> <span class="n">direction</span><span class="p">:</span> <span class="s2">'center'</span><span class="p">}</span><span class="o">);</span>
+        <span class="err">}</span>
+</code></pre></div></div>
+<p>The classes referenced above are imported into index.html from local files to override portions of the Leaflet CSS.</p>
+
+<p><img src="http://localhost:4000/assets/img/PastryPopup.jpg" alt="Pastry Map Pop-up" /></p>
+
+<h3 id="attribute-filtering">Attribute Filtering</h3>
+
+<p>Some participating vendors do not have brick and mortar storefronts.</p>
+
+<p>To avoid confusion, I wanted to show the location where they were distributing but not the address.</p>
+
+<p>Similarly, the pastry baker at the starting location has a separate Instagram from the coffee shop. I stored this in an “Info” field in the point attributes, but other locations had this field blank.</p>
+
+<p>To prevent “Null” from being displayed when one of these attributes is not populated for a location I built some javascript functions.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">getinfo</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if </span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">Info</span> <span class="o">==</span> <span class="dl">'</span><span class="s1">null</span><span class="dl">'</span><span class="p">){</span>
+            <span class="k">return</span> <span class="dl">''</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">input</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">Info</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">function</span> <span class="nf">getaddress</span><span class="p">(</span><span class="nx">input</span><span class="p">){</span>
+        <span class="k">if </span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">Address</span> <span class="o">==</span> <span class="dl">'</span><span class="s1">null</span><span class="dl">'</span><span class="p">){</span>
+            <span class="k">return</span> <span class="dl">''</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">input</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">Address</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+<p>The functions retrieve the contents of a field for the selected feature and check whether the response is null.</p>
+
+<p>If the field is null, an empty string is returned rather than the attribute.</p>
+
+<p>An opportunity for future optimization would be to consolidate these into a single function that specifies the attribute to query in a parameter.</p>
+
+<h2 id="event-day">Event Day</h2>
+
+<p>The event organizers incorporated the QR Code I provided them into the brochure that participants received while checking in.</p>
+
+<p>This allowed people to easily pull the map up on their phone and follow the route or check their location.</p>
+
+<p>Based on the number of map tiles served by Mapbox on the event day, people made good use of it.</p>
+
+<p><img src="http://localhost:4000/assets/img/PastryMapTileUsage.jpg" alt="Pastry Map Usage" /></p>
+
+<h2 id="takeaways">Takeaways</h2>
+
+<p>I pursued creating this map because I was looking for opportunities to get back into hands on development while also contributing to a worthwile event.</p>
+
+<p>In order to accomplish my vision for the project I had to:</p>
+<ul>
+  <li>Adapt to new browser standards</li>
+  <li>Learn how to write custom CSS and override defaults</li>
+  <li>Understand the event organizer’s vision and how to build on it</li>
+</ul>
+
+<p>If you’re building something similar or have ideas about additional functionality that would serve an event like this, reach out.
+I’d be happy to connect and discuss your ideas.</p>
+
+<hr />
+
+<p><a href="https://jrhutson.github.io/Portland-pastry-10k/">View the live map</a></p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Portland Pastry 10K Walk&url=http://localhost:4000/Portland-Pastry-10K/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/Portland-Pastry-10K/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://www.reddit.com/submit?url=http://localhost:4000/Portland-Pastry-10K/" title="Share on Reddit" rel="nofollow" target="_blank">Reddit</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#Web-Map" class="tag">&#35; Web-Map</a>
+          
+            <a href="/tags#Leaflet" class="tag">&#35; Leaflet</a>
+          
+            <a href="/tags#Community" class="tag">&#35; Community</a>
+          
+            <a href="/tags#Pro-Bono" class="tag">&#35; Pro-Bono</a>
+          
+        </div>
+      </div>
+      <!--<section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+ -->
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
