@@ -135,12 +135,20 @@
         <h1 class="page-title">Portland Pastry 10K Walk</h1>
         <!--div class="page-date"><span>2026, Jun 06&nbsp;&nbsp;&nbsp;&nbsp;</span></div-->
       </header>
-      <p><strong><em>Tools Used:</em></strong></p>
+      <p><strong><em>Contents:</em></strong></p>
+
+<p><a href="#data-digitization">Data Digitization</a><br />
+<a href="#basemap-styling-in-mapbox">Basemap Styling in Mapbox</a><br />
+<a href="#leaflet-map-development">Leaflet Map Development</a><br />
+<a href="#event-day">Event Day</a><br />
+<a href="#takeaways">Takeaways</a></p>
+
+<p><strong><em>Tools Used:</em></strong></p>
 <ol>
-  <li>Q-GIS</li>
-  <li>Mapbox</li>
-  <li>Leaflet</li>
-  <li>GitHub Pages</li>
+  <li>Q-GIS - Open Source Geographic Information System</li>
+  <li>Mapbox - Platform for hosting custom basemaps styled from Open Streetmap data</li>
+  <li>Leaflet - Light weight javascript library for building web-maps</li>
+  <li>GitHub Pages - Simple web hosting option</li>
 </ol>
 
 <p><a href="https://jrhutson.github.io/Portland-pastry-10k/">View the live map</a></p>
@@ -165,7 +173,7 @@ The map I developed:</p>
 
 <h2 id="data-digitization">Data Digitization</h2>
 
-<p>Route and Vendor data were digitized using Q-GIS.<br />
+<p>I used QGIS to digitize route and vendor data.<br />
 This method was ideal for a number of reasons:</p>
 <ul>
   <li>Ease of export of data to Geo-JSON.</li>
@@ -184,7 +192,7 @@ This method was ideal for a number of reasons:</p>
 <h2 id="color-choice">Color Choice</h2>
 <p>The information provided by the organizers told me that Salmon was going to be the primary color for the event’s materials.<br />
 I knew that I would need complimentary colors in order to style the map in a way that would be both pleasing and ledgible.<br />
-A free <a href="https://www.colorpalettegenerator.co">Color Palette Generator</a> allowed me to start with my primary color and assemble a group of other colors that would fit well, while providing highlights or contrast as needed.</p>
+I used a <a href="https://www.colorpalettegenerator.co">Color Palette Generator</a> to assemble a group of colors that would compliment that primary color, while providing highlights or contrast as needed.</p>
 
 <h3 id="pastry-map-color-palette">Pastry Map Color Palette</h3>
 <p><img src="http://localhost:4000/assets/img/PastryMapColorPalette.jpg" alt="Pastry Map Color Palette" /></p>
@@ -194,134 +202,122 @@ A free <a href="https://www.colorpalettegenerator.co">Color Palette Generator</a
 <h2 id="basemap-styling-in-mapbox">Basemap Styling in Mapbox</h2>
 
 <p>Because I wanted all aspects of the map to fit with the event branding, I needed a way to create and host my own custom basemap.<br />
-After reviewing their plans, I confirmed that my expected usage would fall well within the Mapbox Free Tier.\</p>
+After reviewing their plans, I confirmed that my expected usage would fall well within the Mapbox Free Tier.</p>
 
 <h3 id="feature-prioritization">Feature Prioritization</h3>
 <p>I made sure that my styling focused on local streets and paths that would be the most relevant features for participants.<br />
 Salmon made sense as the primary background color, to fit with the event branding.<br />
-Other colors from my palette ensured that streets, paths and labels would complement the salmon background.</p>
+I used other colors from my palette to ensure that streets, paths and labels would complement the salmon background.</p>
 
 <h3 id="feature-styling">Feature Styling</h3>
-<p>Styling for prioritized features was configured through Mapbox Studio.
+<p>I configured the styling for prioritized features through Mapbox Studio.
 <img src="http://localhost:4000/assets/img/PastryMapMapboxFeatures.jpg" alt="Styling Features in Mapbox" /></p>
 
 <hr />
 
 <h2 id="leaflet-map-development">Leaflet Map Development</h2>
 
-<h3 id="locations-of-sheriffs-dui-arrests-compared-to-city-of-los-angeles-boundary">Locations of Sheriffs DUI Arrests compared to City of Los Angeles Boundary</h3>
-<p><img src="http://localhost:4000/assets/img/GAFinalProject/SheriffsDataVsCityBoundary.png" alt="Sheriffs DUI Arrests vs City of LA" /></p>
+<h3 id="hosting">Hosting</h3>
+<p>Based on the scale of the event and the expected usage, I was comfortable that Github Pages would be adequate to serve as a hosting service.</p>
 
-<p>I combined the total DUI arrests within the City of Los Angeles during that 6mo period and calculated the percentage of DUI arrests that were made by LA County Sheriffs.</p>
+<h3 id="basemap-integration">Basemap Integration</h3>
+<p>Accessing the custom basemap that I configured through Mapbox requires a private key token.
+I knew that this would be deployed to Github Pages and the token would be visible, so I invested time in making sure it was managed in a secure way.</p>
 
-<p>How much of an impact would the Sheriff’s data have?</p>
+<p>The Github Pages deployment uses a specific key that I setup to only work for requests from the Github Pages URL.
+This ensures that even though the key is publicly visible it is not useful for any other purpose.</p>
 
-<p>In the 6 Months of available data LA County Sheriffs only made 39 DUI arrests within the city limits of Los Angeles. This makes sense, as they typically patrol unincorporated parts of the county.</p>
+<p>For local development, I used my account’s default token.</p>
 
-<p>In the same time period, LAPD made 4255 arrests within the city.</p>
+<p>I stored the token in a separate file and added it to gitignore.</p>
 
-<p>39/4255 = 0.00916</p>
+<p>Once set up, I could push code changes without exposing the default token.</p>
 
-<p><strong>Less than 1% of DUI Arrests in the City of LA were from LA County Sheriff’s during that 6mo period</strong></p>
+<h3 id="data-integration">Data Integration</h3>
+<p>I exported the data from QGIS in two GeoJSON files.</p>
 
-<p>Due to the low percentage I decided to exclude the Sheriff’s data and focus on the LAPD data. This allowed me to widen the timeframe I was looking at and base my analysis on a much larger dataset.</p>
+<p>One contained points for the stops along the route and attributes of the vendors. The other contained a line marking the route.</p>
 
-<hr />
+<p>I started to load the files into Leaflet using a structure modeled on older webmap projects I built.</p>
 
-<h2 id="connecting-duis-to-freeway-segments">Connecting DUI’s to Freeway Segments</h2>
-<p>Freeway segments and associated ramps were selected and buffered in QGIS. Because there was not a common attribute to connect a ramp feature to a particular segment of freeway, this was the easiest path.</p>
+<p>Due to new browser restrictions on loading local files the data was blocked and I had to find a new solution.</p>
 
-<h3 id="freeway-segments">Freeway Segments</h3>
-<p><img src="http://localhost:4000/assets/img/GAFinalProject/FreewaySegments.png" alt="Freeway Segments" /></p>
+<p>In the end, I stored the GeoJSON text as variables in two javascript files and imported the variables into memory when the page is loaded.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Freeway Segment</th>
-      <th style="text-align: center">Rail Alternative?</th>
-      <th style="text-align: center">Line</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">10</td>
-      <td style="text-align: center">Yes</td>
-      <td style="text-align: center">E Line (Expo)</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">101</td>
-      <td style="text-align: center">Yes</td>
-      <td style="text-align: center">B Line (Red)</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">110</td>
-      <td style="text-align: center">Yes</td>
-      <td style="text-align: center">L Line (Gold)</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">405</td>
-      <td style="text-align: center">No</td>
-      <td style="text-align: center">None</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">5</td>
-      <td style="text-align: center">No</td>
-      <td style="text-align: center">None</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">118</td>
-      <td style="text-align: center">No</td>
-      <td style="text-align: center">None</td>
-    </tr>
-  </tbody>
-</table>
+<h3 id="custom-css">Custom CSS</h3>
+<p>Leaflet does not have a built in labeling function.</p>
 
-<h3 id="duis-falling-within-buffers">DUI’s Falling Within Buffers</h3>
-<p><img src="http://localhost:4000/assets/img/GAFinalProject/DUIsInFreewayBuffers.png" alt="Freeway DUI's" /></p>
+<p>The best option my research identified was to use the Tool Tip function and set it to always be visible.</p>
 
-<hr />
+<p>I modified both the Tooltip and Pop-up features with custom CSS so they would fit with the color pallate.</p>
 
-<h2 id="comparing-dui-incidence">Comparing DUI Incidence</h2>
-<p><img src="http://localhost:4000/assets/img/GAFinalProject/RawDUIRateBySegment.png" alt="Raw DUI Incidence" /></p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">return</span> <span class="nt">L</span><span class="nc">.circleMarker</span><span class="o">(</span><span class="nt">latlon</span><span class="o">,</span> <span class="err">3</span><span class="o">)</span><span class="nc">.bindPopup</span><span class="o">(</span><span class="nt">content</span><span class="o">,</span> <span class="p">{</span><span class="err">'className'</span> <span class="err">:</span> <span class="err">'PastryPopUp'</span><span class="p">}</span><span class="o">)</span>
+        <span class="nc">.bindTooltip</span><span class="o">(</span><span class="nt">label</span><span class="o">,</span> <span class="p">{</span><span class="py">className</span><span class="p">:</span> <span class="s2">'PastryToolTip'</span><span class="p">,</span> <span class="n">permanent</span><span class="p">:</span> <span class="no">true</span><span class="p">,</span> <span class="nf">opacity</span><span class="p">:</span> <span class="m">0.8</span><span class="p">,</span> <span class="n">offset</span><span class="p">:</span> <span class="p">[</span><span class="m">0</span><span class="p">,</span><span class="m">30</span><span class="p">],</span> <span class="n">direction</span><span class="p">:</span> <span class="s2">'center'</span><span class="p">}</span><span class="o">);</span>
+        <span class="err">}</span>
+</code></pre></div></div>
+<p>The classes referenced above are imported into index.html from local files to override portions of the Leaflet CSS.</p>
 
-<h2 id="initial-conclusions">Initial Conclusions</h2>
-<ol>
-  <li>This is not the pattern expected, the segments with the most DUI’s are those with a rail option.</li>
-  <li>Need to isolate other possible variables.</li>
-  <li>Segments are not all the same length. Additionally, traffic levels may be different.</li>
-  <li>Data needs to be normalized to ensure we are making a valid comparison</li>
-</ol>
+<p><img src="http://localhost:4000/assets/img/PastryPopup.jpg" alt="Pastry Map Pop-up" /></p>
 
-<h2 id="normalizing-for-traffic">Normalizing for Traffic</h2>
-<p>AADT (Average Annual Daily Total) Traffic Counts from California Department of Transportation were brought into the analysis. The same buffers were used to select all data points that fell within a buffer and take the average.</p>
+<h3 id="attribute-filtering">Attribute Filtering</h3>
 
-<p><img src="http://localhost:4000/assets/img/GAFinalProject/AADTPoints.png" alt="AADT Points" /></p>
+<p>Some participating vendors do not have brick and mortar storefronts.</p>
 
-<p>This gives us the average number of cars traveling along that segment of freeway per day.</p>
+<p>To avoid confusion, I wanted to show the location where they were distributing but not the address.</p>
 
-<p>After converting the DUI data into a rate of DUI’s per 1000 cars.</p>
+<p>Similarly, the pastry baker at the starting location has a separate Instagram from the coffee shop. I stored this in an “Info” field in the point attributes, but other locations had this field blank.</p>
 
-<p><img src="http://localhost:4000/assets/img/GAFinalProject/NormalizedComparison.png" alt="Normalized Data" /></p>
+<p>To prevent “Null” from being displayed when one of these attributes is not populated for a location I built some javascript functions.</p>
 
-<p>With the data normalized, the three freeway segments with rail alternatives all have the highest rate of DUI arrests.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">getinfo</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if </span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">Info</span> <span class="o">==</span> <span class="dl">'</span><span class="s1">null</span><span class="dl">'</span><span class="p">){</span>
+            <span class="k">return</span> <span class="dl">''</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">input</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">Info</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-<hr />
+    <span class="kd">function</span> <span class="nf">getaddress</span><span class="p">(</span><span class="nx">input</span><span class="p">){</span>
+        <span class="k">if </span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">Address</span> <span class="o">==</span> <span class="dl">'</span><span class="s1">null</span><span class="dl">'</span><span class="p">){</span>
+            <span class="k">return</span> <span class="dl">''</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">input</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">Address</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+<p>The functions retrieve the contents of a field for the selected feature and check whether the response is null.</p>
 
-<h2 id="conclusions">Conclusions</h2>
+<p>If the field is null, an empty string is returned rather than the attribute.</p>
 
-<ol>
-  <li>Based on the normalized data, the initial hypothesis must be rejected.</li>
-  <li>The correlation between high DUI’s and Rail, might indicate that similar factors contribute to them.
-    * For example, population centers that contribute to DUI’s would also be a factor in transit funding.</li>
-</ol>
+<p>An opportunity for future optimization would be to consolidate these into a single function that specifies the attribute to query in a parameter.</p>
 
-<h2 id="questions-for-future-analysis">Questions for Future Analysis</h2>
+<h2 id="event-day">Event Day</h2>
 
+<p>The event organizers incorporated the QR Code I provided them into the brochure that participants received while checking in.</p>
+
+<p>This allowed people to easily pull the map up on their phone and follow the route or check their location.</p>
+
+<p>Based on the number of map tiles served by Mapbox on the event day, people made good use of it.</p>
+
+<p><img src="http://localhost:4000/assets/img/PastryMapTileUsage.jpg" alt="Pastry Map Usage" /></p>
+
+<h2 id="takeaways">Takeaways</h2>
+
+<p>I pursued creating this map because I was looking for opportunities to get back into hands on development while also contributing to a worthwile event.</p>
+
+<p>In order to accomplish my vision for the project I had to:</p>
 <ul>
-  <li>Does a new Metro Line influence the rate of DUI’s when it opens?</li>
-  <li>What is the distribution of DUI’s in Los Angeles?</li>
-  <li>What are the trends in DUI incidence and distribution over time?</li>
+  <li>Adapt to new browser standards</li>
+  <li>Learn how to write custom CSS and override defaults</li>
+  <li>Understand the event organizer’s vision and how to build on it</li>
 </ul>
+
+<p>If you’re building something similar or have ideas about additional functionality that would serve an event like this, reach out.
+I’d be happy to connect and discuss your ideas.</p>
+
+<hr />
+
+<p><a href="https://jrhutson.github.io/Portland-pastry-10k/">View the live map</a></p>
 
       <div class="page-footer">
         <div class="page-share">
